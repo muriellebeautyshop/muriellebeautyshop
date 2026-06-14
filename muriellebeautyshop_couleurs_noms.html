@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>muriellebeautyshop — Boutique en ligne</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== VARIABLES ===== */
+:root{
+  --cream:#F8F2E8; --cream-2:#F1E7D6;
+  --teal:#1E4A56; --teal-deep:#143138;
+  --gold:#C99B4A; --coral:#D9554B;
+  --lavender:#A893C9; --green:#5fae9e;
+  --ink:#26302F; --paper:#FFFDF8;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Manrope',sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;}
+h1,h2,h3,.display{font-family:'Fraunces',serif;font-weight:600;color:var(--teal-deep);letter-spacing:-0.01em;}
+img{max-width:100%;display:block;}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+
+/* ===== HEADER ===== */
+header{position:sticky;top:0;z-index:50;background:rgba(248,242,232,0.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,74,86,0.08);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1100px;margin:0 auto;}
+.logo{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:700;color:var(--teal-deep);}
+.logo span{color:var(--coral);font-style:italic;}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--teal-deep);color:var(--paper);padding:10px 20px;border-radius:999px;font-size:0.85rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;transition:background .2s,transform .2s;white-space:nowrap;}
+.nav-cta:hover{background:var(--teal);transform:translateY(-1px);}
+
+/* ===== HERO ===== */
+.hero{padding:56px 0 0;overflow:hidden;}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--teal);background:var(--cream-2);padding:8px 14px;border-radius:999px;margin-bottom:22px;}
+.eyebrow::before{content:"●";color:var(--coral);font-size:0.6rem;}
+.hero h1{font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.08;margin-bottom:18px;}
+.hero h1 em{font-style:italic;color:var(--coral);}
+.hero p.lead{font-size:1.08rem;color:#4b5856;max-width:480px;margin-bottom:30px;}
+.price-tag{display:inline-flex;align-items:center;gap:14px;background:var(--teal-deep);color:var(--paper);padding:14px 26px;border-radius:14px;margin-bottom:28px;box-shadow:0 14px 30px -10px rgba(20,49,56,0.5);}
+.price-tag .amount{font-family:'Fraunces',serif;font-weight:700;font-size:1.9rem;color:var(--gold);line-height:1;}
+.price-tag .sub{font-size:0.78rem;line-height:1.3;opacity:0.85;}
+.price-tag .sub b{color:#fff;}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:700;font-size:0.95rem;text-decoration:none;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:'Manrope',sans-serif;}
+.btn-primary{background:var(--coral);color:#fff;box-shadow:0 14px 28px -12px rgba(217,85,75,0.55);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 32px -12px rgba(217,85,75,0.6);}
+.hero-visual{position:relative;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -25px rgba(20,49,56,0.45);transform:rotate(1.2deg);}
+.hero-visual img,.hero-visual .img-placeholder{width:100%;height:340px;object-fit:cover;}
+.img-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--cream-2),#e8ddc8);color:var(--teal);font-size:3rem;gap:10px;}
+.img-placeholder span{font-size:0.85rem;font-family:'Manrope',sans-serif;font-weight:600;opacity:0.6;}
+
+/* ===== SECTIONS ===== */
+section{padding:70px 0;}
+.section-title{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:14px;}
+.section-sub{color:#5b6764;max-width:560px;margin-bottom:40px;font-size:1.02rem;}
+.tag-eyebrow{font-size:0.78rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:10px;display:block;}
+
+/* ===== FEATURES ===== */
+.features-band{background:var(--teal-deep);color:var(--paper);border-radius:28px;padding:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+.feature h3{color:var(--paper);font-size:1.1rem;margin-bottom:8px;display:flex;gap:10px;align-items:center;}
+.feature h3 .check{width:28px;height:28px;border-radius:50%;background:var(--gold);color:var(--teal-deep);display:flex;align-items:center;justify-content:center;font-size:0.95rem;flex:none;}
+.feature p{color:#cfe0e0;font-size:0.92rem;}
+
+/* ===== PRODUCTS ===== */
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;}
+.product-card{background:var(--paper);border-radius:20px;overflow:hidden;border:1px solid rgba(30,74,86,0.08);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;position:relative;}
+.product-card:hover{transform:translateY(-6px);box-shadow:0 18px 30px -18px rgba(20,49,56,0.35);}
+.product-img{height:200px;width:100%;object-fit:cover;}
+.product-img-placeholder{height:200px;width:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,var(--cream-2),#e8ddc8);}
+.product-body{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1;}
+.product-body h3{font-size:1.05rem;}
+.product-body p{font-size:0.9rem;color:#5b6764;flex:1;}
+.product-footer{display:flex;align-items:center;justify-content:space-between;margin-top:10px;gap:10px;}
+.product-price{font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;color:var(--teal-deep);}
+.btn-small{padding:10px 18px;font-size:0.85rem;}
+
+/* ===== STEPS ===== */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.step{background:var(--paper);border-radius:20px;padding:30px 26px;border:1px solid rgba(30,74,86,0.08);}
+.step .num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--lavender);line-height:1;margin-bottom:14px;display:block;}
+.step h3{font-size:1.05rem;margin-bottom:6px;}
+.step p{font-size:0.92rem;color:#5b6764;}
+
+/* ===== DELIVERY BAND ===== */
+.delivery-band{background:var(--gold);border-radius:24px;padding:34px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;color:var(--teal-deep);}
+.delivery-band .big{font-family:'Fraunces',serif;font-weight:700;font-size:1.6rem;}
+.delivery-band p{font-size:0.95rem;max-width:420px;}
+
+/* ===== FOOTER ===== */
+footer{background:var(--teal-deep);color:#cfe0e0;padding:60px 0 40px;}
+.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+footer h3{color:var(--paper);font-size:1.05rem;margin-bottom:14px;}
+.logo-f{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:700;color:#fff;margin-bottom:12px;}
+.logo-f span{color:var(--gold);font-style:italic;}
+footer p,footer a{color:#aac3c4;font-size:0.92rem;text-decoration:none;}
+footer a:hover{color:#fff;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;font-size:0.82rem;color:#7fa0a1;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+
+/* ===== ORDER MODAL ===== */
+.modal-overlay{position:fixed;inset:0;background:rgba(20,49,56,0.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:200;}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--paper);border-radius:24px;max-width:480px;width:100%;padding:32px;position:relative;max-height:90vh;overflow-y:auto;}
+.modal-close{position:absolute;top:18px;right:18px;width:36px;height:36px;border-radius:50%;border:1.5px solid rgba(30,74,86,0.15);background:var(--cream);font-size:1.1rem;cursor:pointer;color:var(--teal-deep);display:flex;align-items:center;justify-content:center;}
+.modal-product{display:flex;align-items:center;gap:14px;background:var(--cream);border-radius:14px;padding:14px;margin-bottom:24px;}
+.modal-product img,.modal-product .modal-thumb-placeholder{width:56px;height:56px;border-radius:10px;flex:none;object-fit:cover;}
+.modal-thumb-placeholder{display:flex;align-items:center;justify-content:center;font-size:1.6rem;background:var(--cream-2);}
+.modal-product h3{font-size:1rem;margin-bottom:2px;}
+.modal-product .price{font-family:'Fraunces',serif;font-weight:700;color:var(--teal-deep);font-size:1rem;}
+.form-field{display:flex;flex-direction:column;gap:8px;margin-bottom:16px;}
+.form-field label{font-size:0.85rem;font-weight:700;color:var(--teal-deep);}
+.form-field input,.form-field select{font-family:'Manrope',sans-serif;font-size:0.95rem;color:var(--ink);background:var(--cream);border:1.5px solid rgba(30,74,86,0.12);border-radius:12px;padding:13px 16px;outline:none;transition:border-color .2s,box-shadow .2s;}
+.form-field input:focus,.form-field select:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(30,74,86,0.12);}
+.form-submit{width:100%;justify-content:center;}
+.form-note{margin-top:14px;font-size:0.85rem;color:#5b6764;text-align:center;}
+.order-success{display:none;text-align:center;padding:20px 0;}
+.order-success .icon{font-size:2.6rem;margin-bottom:14px;}
+.order-success h3{margin-bottom:8px;}
+.order-success p{color:#5b6764;font-size:0.95rem;}
+
+/* ===== ADMIN PANEL ===== */
+#admin-toggle{position:fixed;bottom:24px;right:24px;z-index:500;background:var(--teal-deep);color:#fff;border:none;cursor:pointer;width:52px;height:52px;border-radius:50%;font-size:1.3rem;box-shadow:0 8px 24px rgba(0,0,0,0.3);transition:transform .2s,background .2s;display:flex;align-items:center;justify-content:center;}
+#admin-toggle:hover{background:var(--teal);transform:scale(1.08);}
+#admin-toggle .admin-label{position:absolute;right:60px;background:var(--teal-deep);color:#fff;padding:5px 12px;border-radius:8px;font-size:0.78rem;font-weight:700;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;}
+#admin-toggle:hover .admin-label{opacity:1;}
+
+#admin-panel{position:fixed;top:0;right:-480px;width:460px;height:100vh;background:var(--paper);z-index:400;box-shadow:-8px 0 40px rgba(0,0,0,0.2);transition:right .3s ease;overflow-y:auto;display:flex;flex-direction:column;}
+#admin-panel.open{right:0;}
+.admin-header{background:var(--teal-deep);padding:20px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;}
+.admin-header h2{font-family:'Fraunces',serif;color:#fff;font-size:1.15rem;}
+.admin-header .admin-logo span{color:var(--gold);}
+.admin-close{background:rgba(255,255,255,0.1);border:none;color:#fff;width:34px;height:34px;border-radius:8px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .15s;}
+.admin-close:hover{background:rgba(255,255,255,0.2);}
+
+.admin-tabs{display:flex;border-bottom:2px solid var(--cream-2);padding:0 16px;background:var(--cream);}
+.admin-tab{padding:12px 16px;font-size:0.84rem;font-weight:700;color:#7a9090;background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:color .15s,border-color .15s;}
+.admin-tab.active{color:var(--teal-deep);border-bottom-color:var(--coral);}
+
+.admin-body{padding:20px;flex:1;}
+
+/* Admin: Stats mini */
+.admin-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;}
+.admin-stat{background:var(--cream);border-radius:12px;padding:12px 16px;}
+.admin-stat .n{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;color:var(--teal-deep);}
+.admin-stat .l{font-size:0.75rem;color:#7a9090;margin-top:2px;}
+
+/* Admin: Product list */
+.admin-product-list{display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
+.admin-product-item{background:var(--cream);border-radius:12px;padding:12px;display:flex;align-items:center;gap:12px;}
+.admin-product-thumb{width:48px;height:48px;border-radius:10px;object-fit:cover;flex:none;}
+.admin-product-thumb-ph{width:48px;height:48px;border-radius:10px;background:var(--cream-2);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex:none;}
+.admin-product-info{flex:1;min-width:0;}
+.admin-product-info .pname{font-weight:700;font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.admin-product-info .pprice{font-family:'Fraunces',serif;font-size:0.9rem;color:var(--teal-deep);}
+.admin-product-actions{display:flex;gap:6px;}
+.abtn{padding:6px 10px;border-radius:8px;border:none;cursor:pointer;font-size:0.78rem;font-weight:700;transition:opacity .15s;}
+.abtn-edit{background:rgba(30,74,86,0.1);color:var(--teal-deep);}
+.abtn-edit:hover{background:rgba(30,74,86,0.2);}
+.abtn-del{background:rgba(217,85,75,0.1);color:var(--coral);}
+.abtn-del:hover{background:rgba(217,85,75,0.2);}
+.abtn-hero{background:rgba(201,155,74,0.15);color:#8b6a1f;}
+.abtn-hero:hover{background:rgba(201,155,74,0.3);}
+
+/* Admin: Form */
+.aform-field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+.aform-field label{font-size:0.8rem;font-weight:700;color:var(--teal-deep);}
+.aform-field input,.aform-field select,.aform-field textarea{font-family:'Manrope',sans-serif;font-size:0.88rem;color:var(--ink);background:var(--cream);border:1.5px solid rgba(30,74,86,0.12);border-radius:10px;padding:10px 13px;outline:none;transition:border-color .2s;}
+.aform-field input:focus,.aform-field select:focus,.aform-field textarea:focus{border-color:var(--teal);}
+.aform-field textarea{resize:vertical;min-height:72px;}
+.aform-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+
+/* Image upload zone */
+.img-upload-zone{border:2px dashed rgba(30,74,86,0.2);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;position:relative;overflow:hidden;}
+.img-upload-zone:hover{border-color:var(--teal);background:rgba(30,74,86,0.03);}
+.img-upload-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+.img-upload-zone .upload-preview{width:100%;height:120px;object-fit:cover;border-radius:8px;display:none;}
+.img-upload-zone .upload-icon{font-size:2rem;margin-bottom:6px;}
+.img-upload-zone .upload-text{font-size:0.82rem;color:#7a9090;font-weight:600;}
+.img-upload-zone .upload-hint{font-size:0.75rem;color:#aaa;margin-top:4px;}
+
+.aform-submit{width:100%;padding:12px;border-radius:999px;border:none;cursor:pointer;background:var(--teal-deep);color:#fff;font-family:'Manrope',sans-serif;font-size:0.9rem;font-weight:700;transition:background .15s;margin-top:6px;}
+.aform-submit:hover{background:var(--teal);}
+.aform-submit.coral{background:var(--coral);}
+.aform-submit.coral:hover{background:#c0392b;}
+
+.aform-section-title{font-family:'Fraunces',serif;font-size:1rem;color:var(--teal-deep);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--cream-2);}
+
+/* Hero edit section */
+.hero-edit-preview{background:var(--cream);border-radius:12px;padding:14px;margin-bottom:16px;display:flex;gap:12px;align-items:center;}
+.hero-edit-preview img,.hero-edit-preview .hep-ph{width:64px;height:64px;border-radius:10px;object-fit:cover;flex:none;}
+.hero-edit-preview .hep-ph{background:var(--cream-2);display:flex;align-items:center;justify-content:center;font-size:1.8rem;}
+.hero-edit-preview .hep-info{flex:1;}
+.hero-edit-preview .hep-info .hname{font-weight:700;font-size:0.9rem;}
+.hero-edit-preview .hep-info .hprice{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:0.95rem;}
+
+/* Toast */
+.toast{position:fixed;bottom:90px;right:28px;z-index:600;background:var(--teal-deep);color:#fff;padding:12px 20px;border-radius:12px;font-size:0.88rem;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,0.2);transform:translateY(60px);opacity:0;transition:all .3s ease;border-left:4px solid var(--green);}
+.toast.show{transform:translateY(0);opacity:1;}
+
+/* ===== LOGIN MODAL ===== */
+#login-overlay{position:fixed;inset:0;background:rgba(20,49,56,0.7);display:none;align-items:center;justify-content:center;z-index:700;backdrop-filter:blur(4px);}
+#login-overlay.open{display:flex;}
+.login-box{background:var(--paper);border-radius:24px;padding:36px 32px;width:100%;max-width:360px;box-shadow:0 30px 60px rgba(0,0,0,0.25);text-align:center;}
+.login-box .login-logo{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;color:var(--teal-deep);margin-bottom:6px;}
+.login-box .login-logo span{color:var(--coral);font-style:italic;}
+.login-box .login-sub{font-size:0.83rem;color:#7a9090;margin-bottom:24px;}
+.login-box .login-icon{font-size:2.2rem;margin-bottom:16px;}
+.login-field{display:flex;flex-direction:column;gap:8px;margin-bottom:16px;text-align:left;}
+.login-field label{font-size:0.82rem;font-weight:700;color:var(--teal-deep);}
+.login-field input{font-family:'Manrope',sans-serif;font-size:0.95rem;background:var(--cream);border:1.5px solid rgba(30,74,86,0.15);border-radius:12px;padding:13px 16px;outline:none;color:var(--ink);transition:border-color .2s;}
+.login-field input:focus{border-color:var(--teal);}
+.login-field input.error{border-color:var(--coral);animation:shake .3s ease;}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.login-btn{width:100%;padding:13px;border-radius:999px;border:none;cursor:pointer;background:var(--teal-deep);color:#fff;font-family:'Manrope',sans-serif;font-size:0.95rem;font-weight:700;transition:background .15s,transform .15s;margin-top:4px;}
+.login-btn:hover{background:var(--teal);transform:translateY(-1px);}
+.login-error{color:var(--coral);font-size:0.82rem;margin-top:10px;display:none;font-weight:600;}
+.login-close-row{margin-top:16px;}
+.login-close-link{font-size:0.82rem;color:#7a9090;cursor:pointer;background:none;border:none;text-decoration:underline;font-family:'Manrope',sans-serif;}
+.login-close-link:hover{color:var(--ink);}
+
+/* Colors */
+.color-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px;}
+.color-chip{width:26px;height:26px;border-radius:50%;cursor:pointer;border:3px solid transparent;transition:border-color .15s;}
+.color-chip.sel{border-color:var(--teal-deep);}
+
+/* Responsive */
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-visual{order:-1;transform:rotate(0);max-width:340px;margin:0 auto;}
+  .features-band{grid-template-columns:1fr;padding:28px;}
+  .steps{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .delivery-band{flex-direction:column;text-align:left;}
+  section{padding:50px 0;}
+  #admin-panel{width:100%;right:-100%;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <nav class="nav">
+    <div class="logo" id="site-logo">murielle<span>beauty</span>shop</div>
+    <button class="nav-cta" onclick="document.getElementById('produits').scrollIntoView({behavior:'smooth'})">
+      Voir les produits
+    </button>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow" id="hero-eyebrow">Abidjan · Livraison à domicile</span>
+        <h1 id="hero-title">Le <em>soin</em> de vos oreilles,<br>livré chez vous.</h1>
+        <p class="lead" id="hero-desc">Kit complet de nettoyage et de retrait de cérumen, en acier inoxydable, hygiénique et réutilisable. Disponible en plusieurs couleurs.</p>
+        <div class="price-tag">
+          <span class="amount" id="hero-price-display">3 000 F</span>
+          <span class="sub">Kit complet<br><b id="hero-delivery-display">+ 1 000 FCFA</b> de livraison à Abidjan</span>
+        </div>
+        <div>
+          <button class="btn btn-primary" id="hero-order-btn" onclick="openOrderModal(0)">
+            🛒 Commander ce produit
+          </button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div id="hero-img-wrap"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section>
+  <div class="wrap">
+    <div class="features-band">
+      <div class="feature">
+        <h3><span class="check">✓</span> Acier inoxydable</h3>
+        <p>Matériau hygiénique, durable et facile à nettoyer. Conçu pour durer longtemps.</p>
+      </div>
+      <div class="feature">
+        <h3><span class="check">✓</span> Livraison rapide</h3>
+        <p>Commandez aujourd'hui, recevez chez vous à Abidjan et environs en 24-48h.</p>
+      </div>
+      <div class="feature">
+        <h3><span class="check">✓</span> Plusieurs couleurs</h3>
+        <p>Disponible en plusieurs coloris pour correspondre à vos préférences.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATALOGUE ===== -->
+<section id="produits">
+  <div class="wrap">
+    <span class="tag-eyebrow">Notre catalogue</span>
+    <h2 class="section-title">Tous nos produits</h2>
+    <p class="section-sub">Des solutions beauté et bien-être livrées directement chez vous à Abidjan.</p>
+    <div class="product-grid" id="product-grid"></div>
+    <div id="catalog-empty" style="text-align:center;padding:40px 0;color:#7a9090;display:none;">
+      <div style="font-size:2.5rem;margin-bottom:10px;">📭</div>
+      <p>Aucun produit pour l'instant. Ouvrez le panneau admin pour en ajouter.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section>
+  <div class="wrap">
+    <span class="tag-eyebrow">Comment ça marche</span>
+    <h2 class="section-title">Simple & rapide</h2>
+    <div class="steps">
+      <div class="step"><span class="num">1</span><h3>Choisissez</h3><p>Parcourez notre catalogue et sélectionnez le produit qui vous convient.</p></div>
+      <div class="step"><span class="num">2</span><h3>Commandez</h3><p>Remplissez le formulaire en quelques secondes, sans compte nécessaire.</p></div>
+      <div class="step"><span class="num">3</span><h3>Recevez</h3><p>Nous livrons à domicile à Abidjan. Paiement à la livraison disponible.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LIVRAISON ===== -->
+<section>
+  <div class="wrap">
+    <div class="delivery-band">
+      <div>
+        <div class="big">🚚 Livraison à domicile</div>
+        <p>Nous livrons partout à Abidjan et dans les communes environnantes. Rapide, fiable et abordable.</p>
+      </div>
+      <button class="btn btn-primary" onclick="document.getElementById('produits').scrollIntoView({behavior:'smooth'})">
+        Commander maintenant
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="logo-f">murielle<span>beauty</span>shop</div>
+        <p>Votre boutique de soins et beauté à Abidjan, avec livraison à domicile.</p>
+      </div>
+      <div>
+        <h3>Navigation</h3>
+        <p><a href="#">Accueil</a></p>
+        <p><a href="#produits">Produits</a></p>
+        <p><a href="#">Contact</a></p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p id="footer-phone">📱 WhatsApp disponible</p>
+        <p>📍 Abidjan, Côte d'Ivoire</p>
+        <p>🕐 Lun – Sam : 8h – 20h</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 muriellebeautyshop. Tous droits réservés.</span>
+      <span>Fait avec ❤️ à Abidjan</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== MODAL COMMANDE ===== -->
+<div class="modal-overlay" id="order-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeOrderModal()">✕</button>
+    <div id="order-form-wrap">
+      <div class="modal-product" id="modal-product-info"></div>
+      <h3 style="margin-bottom:20px;font-size:1.1rem;">Vos informations de livraison</h3>
+      <div class="form-field"><label>Nom complet *</label><input type="text" id="o-name" placeholder="Ex: Murielle Koné"></div>
+      <div class="form-field"><label>Numéro de téléphone *</label><input type="tel" id="o-phone" placeholder="Ex: 07 00 00 00 00"></div>
+      <div class="form-field"><label>Quartier / Commune *</label><input type="text" id="o-zone" placeholder="Ex: Cocody, Yopougon..."></div>
+      <div class="form-field"><label>Couleur souhaitée</label><select id="o-color"></select></div>
+      <button class="btn btn-primary form-submit" onclick="submitOrder()">Confirmer la commande</button>
+      <p class="form-note">📱 Vous serez contacté(e) par WhatsApp pour confirmer.</p>
+    </div>
+    <div class="order-success" id="order-success">
+      <div class="icon">🎉</div>
+      <h3>Commande reçue !</h3>
+      <p>Merci ! Nous vous contacterons bientôt sur WhatsApp pour confirmer votre livraison.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LOGIN MODAL ADMIN ===== -->
+<div id="login-overlay">
+  <div class="login-box">
+    <div class="login-icon">🔐</div>
+    <div class="login-logo">murielle<span>beauty</span>shop</div>
+    <div class="login-sub">Espace administrateur</div>
+    <div class="login-field">
+      <label>Mot de passe</label>
+      <input type="password" id="login-pwd" placeholder="••••••••••••" onkeydown="if(event.key==='Enter')checkLogin()">
+    </div>
+    <button class="login-btn" onclick="checkLogin()">🔓 Accéder au tableau de bord</button>
+    <div class="login-error" id="login-error">❌ Mot de passe incorrect. Réessayez.</div>
+    <div class="login-close-row">
+      <button class="login-close-link" onclick="closeLogin()">Annuler</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ADMIN TOGGLE ===== -->
+<button id="admin-toggle" onclick="toggleAdmin()" title="Tableau de bord admin">
+  ⚙️
+  <span class="admin-label">Admin</span>
+</button>
+
+<!-- ===== ADMIN PANEL ===== -->
+<div id="admin-panel">
+  <div class="admin-header">
+    <h2>🛠 Tableau de bord</h2>
+    <button class="admin-close" onclick="toggleAdmin()">✕</button>
+  </div>
+
+  <div class="admin-tabs">
+    <button class="admin-tab active" onclick="switchTab('tab-products')">📦 Produits</button>
+    <button class="admin-tab" onclick="switchTab('tab-hero')">🌟 Vitrine Hero</button>
+    <button class="admin-tab" onclick="switchTab('tab-settings')">⚙️ Site</button>
+    <button class="admin-tab" onclick="switchTab('tab-orders')">📋 Commandes</button>
+  </div>
+
+  <div class="admin-body">
+
+    <!-- TAB: PRODUITS -->
+    <div id="tab-products" class="admin-tab-content">
+      <div class="admin-stats" id="admin-stats"></div>
+
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <div class="aform-section-title" style="margin:0;border:none;padding:0;">Mes produits</div>
+        <button class="abtn abtn-edit" onclick="openProductForm()">+ Ajouter</button>
+      </div>
+
+      <div class="admin-product-list" id="admin-product-list"></div>
+
+      <!-- FORM AJOUT/MODIF -->
+      <div id="product-form" style="display:none;background:var(--cream);border-radius:14px;padding:16px;margin-top:8px;">
+        <div class="aform-section-title" id="pform-title">Nouveau produit</div>
+
+        <div class="aform-field">
+          <label>Nom du produit *</label>
+          <input type="text" id="pf-name" placeholder="Ex: Kit nettoyage d'oreilles">
+        </div>
+        <div class="aform-field">
+          <label>Description</label>
+          <textarea id="pf-desc" placeholder="Décrivez votre produit..."></textarea>
+        </div>
+        <div class="aform-row">
+          <div class="aform-field">
+            <label>Prix (FCFA) *</label>
+            <input type="number" id="pf-price" placeholder="3000" min="0">
+          </div>
+          <div class="aform-field">
+            <label>Stock</label>
+            <select id="pf-stock">
+              <option value="in">✅ En stock</option>
+              <option value="out">❌ Rupture</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="aform-field">
+          <label>Photo du produit</label>
+          <div class="img-upload-zone" id="pf-img-zone">
+            <input type="file" id="pf-img-input" accept="image/*" onchange="previewProductImage(this)">
+            <img id="pf-img-preview" class="upload-preview">
+            <div id="pf-img-placeholder">
+              <div class="upload-icon">📷</div>
+              <div class="upload-text">Cliquez pour choisir une photo</div>
+              <div class="upload-hint">JPG, PNG, WEBP — max 5 Mo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="aform-field">
+          <label>Couleurs disponibles</label>
+          <div class="color-chips" id="pf-colors">
+            <div class="color-chip" style="background:#e74c3c" data-c="#e74c3c" onclick="toggleChip(this)"></div>
+            <div class="color-chip" style="background:#3498db" data-c="#3498db" onclick="toggleChip(this)"></div>
+            <div class="color-chip" style="background:#2ecc71" data-c="#2ecc71" onclick="toggleChip(this)"></div>
+            <div class="color-chip" style="background:#f39c12" data-c="#f39c12" onclick="toggleChip(this)"></div>
+            <div class="color-chip" style="background:#9b59b6" data-c="#9b59b6" onclick="toggleChip(this)"></div>
+            <div class="color-chip" style="background:#1abc9c" data-c="#1abc9c" onclick="toggleChip(this)"></div>
+            <div class="color-chip" style="background:#e91e8c" data-c="#e91e8c" onclick="toggleChip(this)"></div>
+            <div class="color-chip" style="background:#C99B4A" data-c="#C99B4A" onclick="toggleChip(this)"></div>
+            <div class="color-chip" style="background:#2c3e50" data-c="#2c3e50" onclick="toggleChip(this)"></div>
+            <div class="color-chip" style="background:#ecf0f1;border:2px solid #ccc" data-c="#ecf0f1" onclick="toggleChip(this)"></div>
+            <div class="color-chip" style="background:#7f8c8d" data-c="#7f8c8d" onclick="toggleChip(this)"></div>
+            <div class="color-chip" style="background:#c0392b" data-c="#c0392b" onclick="toggleChip(this)"></div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:8px;margin-top:4px;">
+          <button class="aform-submit" onclick="saveProduct()">💾 Enregistrer</button>
+          <button class="aform-submit" style="background:var(--cream-2);color:var(--ink);" onclick="cancelProductForm()">Annuler</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: HERO -->
+    <div id="tab-hero" class="admin-tab-content" style="display:none;">
+      <div class="aform-section-title">Modifier la vitrine principale</div>
+
+      <div class="hero-edit-preview" id="hero-edit-preview"></div>
+
+      <div class="aform-field">
+        <label>Titre principal</label>
+        <input type="text" id="hf-title" placeholder="Ex: Le soin de vos oreilles" oninput="liveHero()">
+      </div>
+      <div class="aform-field">
+        <label>Description courte</label>
+        <textarea id="hf-desc" oninput="liveHero()"></textarea>
+      </div>
+      <div class="aform-row">
+        <div class="aform-field">
+          <label>Prix affiché (FCFA)</label>
+          <input type="number" id="hf-price" oninput="liveHero()">
+        </div>
+        <div class="aform-field">
+          <label>Frais livraison (FCFA)</label>
+          <input type="number" id="hf-delivery" oninput="liveHero()">
+        </div>
+      </div>
+      <div class="aform-field">
+        <label>Accroche (ex: Abidjan · Livraison)</label>
+        <input type="text" id="hf-eyebrow" oninput="liveHero()">
+      </div>
+      <div class="aform-field">
+        <label>Image hero</label>
+        <div class="img-upload-zone" id="hf-img-zone">
+          <input type="file" id="hf-img-input" accept="image/*" onchange="previewHeroImage(this)">
+          <img id="hf-img-preview" class="upload-preview">
+          <div id="hf-img-placeholder">
+            <div class="upload-icon">🖼️</div>
+            <div class="upload-text">Choisir l'image principale</div>
+            <div class="upload-hint">Recommandé : 600×400px</div>
+          </div>
+        </div>
+      </div>
+      <div class="aform-field">
+        <label>Produit lié (pour le bouton commander)</label>
+        <select id="hf-product" onchange="liveHero()"></select>
+      </div>
+      <button class="aform-submit coral" onclick="saveHero()">🌟 Mettre à jour la vitrine</button>
+    </div>
+
+    <!-- TAB: SETTINGS -->
+    <div id="tab-settings" class="admin-tab-content" style="display:none;">
+      <div class="aform-section-title">Paramètres du site</div>
+      <div class="aform-field"><label>Nom de la boutique</label><input type="text" id="sf-name" value="muriellebeautyshop"></div>
+      <div class="aform-field"><label>Ville de livraison</label><input type="text" id="sf-city" value="Abidjan"></div>
+      <div class="aform-field"><label>Numéro WhatsApp</label><input type="text" id="sf-phone" placeholder="+225 07 00 00 00 00"></div>
+      <div class="aform-field"><label>Frais livraison (FCFA)</label><input type="number" id="sf-delivery" value="1000"></div>
+      <button class="aform-submit" onclick="saveSettings()">💾 Enregistrer les paramètres</button>
+    </div>
+
+  </div>
+</div>
+
+
+    <!-- TAB: ORDERS -->
+    <div id="tab-orders" class="admin-tab-content" style="display:none;">
+      <div class="aform-section-title">Commandes reçues</div>
+      <div id="orders-list"></div>
+    </div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ══════════════════════════════════════════════════════
+// DATA
+// ══════════════════════════════════════════════════════
+const KIT_IMG = ''; // will be filled from upload
+
+let data = JSON.parse(localStorage.getItem('mbs_data') || 'null') || {
+  settings: { name:'muriellebeautyshop', city:'Abidjan', phone:'', delivery:1000 },
+  hero: {
+    title: 'Le soin de vos oreilles, livré chez vous.',
+    desc: 'Kit complet de nettoyage et de retrait de cérumen, en acier inoxydable, hygiénique et réutilisable. Disponible en plusieurs couleurs.',
+    price: 3000, delivery: 1000,
+    eyebrow: 'Abidjan · Livraison à domicile',
+    img: null,
+    linkedProduct: 0
+  },
+  products: [
+    {
+      id: 1, name: "Kit nettoyage d'oreilles", 
+      desc: "Kit complet en acier inoxydable, hygiénique et réutilisable. Livré avec étui de protection.",
+      price: 3000, stock: 'in',
+      img: null,
+      colors: ['#e74c3c','#3498db','#2ecc71','#f39c12','#9b59b6','#1abc9c','#e91e8c']
+    }
+  ]
+};
+function save() { localStorage.setItem('mbs_data', JSON.stringify(data)); }
+
+let editingProductId = null;
+let selectedColors = [];
+let pendingProductImg = null;
+let pendingHeroImg = null;
+let orders = JSON.parse(localStorage.getItem('mbs_orders') || '[]');
+function saveOrders(){ localStorage.setItem('mbs_orders', JSON.stringify(orders)); }
+function renderOrders(){
+ const el=document.getElementById('orders-list');
+ if(!el) return;
+ if(!orders.length){ el.innerHTML='<p>Aucune commande reçue.</p>'; return; }
+ el.innerHTML=orders.map(o=>`<div style="background:#f5f5f5;padding:10px;margin:8px 0;border-radius:8px">
+ <b>${o.product}</b><br>👤 ${o.name}<br>📞 ${o.phone}<br>📍 ${o.zone}<br>🎨 ${o.color||'Sans préférence'}<br>🕒 ${o.date}
+ </div>`).join('');
+}
+
+// ══════════════════════════════════════════════════════
+// RENDER SITE
+// ══════════════════════════════════════════════════════
+function renderSite() {
+  renderHero();
+  renderCatalog();
+}
+
+function renderHero() {
+  const h = data.hero;
+  // Title (preserve the italic em structure)
+  document.getElementById('hero-title').innerHTML = h.title.includes('<em>') 
+    ? h.title 
+    : h.title;
+  document.getElementById('hero-desc').textContent = h.desc;
+  document.getElementById('hero-eyebrow').textContent = h.eyebrow;
+  document.getElementById('hero-price-display').textContent = fmt(h.price) + ' F';
+  document.getElementById('hero-delivery-display').textContent = '+ ' + fmt(h.delivery) + ' FCFA';
+
+  // Hero image
+  const wrap = document.getElementById('hero-img-wrap');
+  if (h.img) {
+    wrap.innerHTML = `<img src="${h.img}" alt="Hero" style="width:100%;height:340px;object-fit:cover;">`;
+  } else {
+    const linked = data.products.find(p => p.id === h.linkedProduct);
+    if (linked && linked.img) {
+      wrap.innerHTML = `<img src="${linked.img}" alt="${linked.name}" style="width:100%;height:340px;object-fit:cover;">`;
+    } else {
+      wrap.innerHTML = `<div class="img-placeholder"><span style="font-size:4rem">🧏</span><span>Image du produit</span></div>`;
+    }
+  }
+}
+
+function renderCatalog() {
+  const grid = document.getElementById('product-grid');
+  const empty = document.getElementById('catalog-empty');
+  grid.innerHTML = '';
+
+  if (!data.products.length) {
+    empty.style.display = 'block'; grid.style.display = 'none'; return;
+  }
+  empty.style.display = 'none'; grid.style.display = 'grid';
+
+  data.products.forEach(p => {
+    const colorDots = (p.colors||[]).map(c =>
+      `<span style="display:inline-block;width:13px;height:13px;border-radius:50%;background:${c};margin-right:3px;border:1.5px solid rgba(0,0,0,0.08)"></span>`
+    ).join('');
+
+    const imgEl = p.img
+      ? `<img class="product-img" src="${p.img}" alt="${p.name}">`
+      : `<div class="product-img-placeholder">🧴</div>`;
+
+    const stockBadge = p.stock === 'out'
+      ? `<span style="font-size:0.75rem;color:#c0392b;font-weight:700;background:rgba(192,57,43,0.1);padding:3px 10px;border-radius:999px;">Rupture de stock</span>` : '';
+
+    grid.innerHTML += `
+      <div class="product-card">
+        ${imgEl}
+        <div class="product-body">
+          <h3>${p.name}</h3>
+          ${stockBadge}
+          <p>${p.desc}</p>
+          ${colorDots ? `<div style="margin-top:4px">${colorDots}</div>` : ''}
+          <div class="product-footer">
+            <span class="product-price">${fmt(p.price)} FCFA</span>
+            ${p.stock !== 'out' 
+              ? `<button class="btn btn-primary btn-small" onclick="openOrderModal(${p.id})">🛒 Commander</button>`
+              : `<button class="btn btn-primary btn-small" disabled style="opacity:0.45;cursor:not-allowed;">Indisponible</button>`
+            }
+          </div>
+        </div>
+      </div>`;
+  });
+}
+
+// ══════════════════════════════════════════════════════
+// ORDER MODAL
+// ══════════════════════════════════════════════════════
+let orderProductId = null;
+function openOrderModal(pid) {
+  orderProductId = pid;
+  document.getElementById('order-form-wrap').style.display = 'block';
+  document.getElementById('order-success').style.display = 'none';
+
+  let p = pid === 0
+    ? { name: data.hero.title.replace(/<[^>]+>/g,''), price: data.hero.price, img: data.hero.img, colors: data.products[0]?.colors||[] }
+    : data.products.find(x => x.id === pid);
+
+  if (!p) return;
+
+  const thumbEl = p.img
+    ? `<img src="${p.img}" alt="${p.name}">`
+    : `<div class="modal-thumb-placeholder">🧴</div>`;
+
+  document.getElementById('modal-product-info').innerHTML = `
+    ${thumbEl}
+    <div>
+      <h3>${p.name}</h3>
+      <div class="price">${fmt(p.price)} FCFA + ${fmt(data.settings.delivery)} FCFA livraison</div>
+    </div>`;
+
+  const sel = document.getElementById('o-color');
+  const colorNames = {
+    '#e74c3c':'Rouge',
+    '#3498db':'Bleu',
+    '#2ecc71':'Vert',
+    '#f39c12':'Orange',
+    '#9b59b6':'Violet',
+    '#1abc9c':'Turquoise',
+    '#e91e8c':'Rose',
+    '#C99B4A':'Doré',
+    '#2c3e50':'Noir',
+    '#ecf0f1':'Blanc',
+    '#7f8c8d':'Gris',
+    '#c0392b':'Rouge foncé'
+  };
+
+  sel.innerHTML = (p.colors||[]).length
+    ? (p.colors.map(c => `<option value="${c}">${colorNames[c] || c}</option>`).join('') + '<option value="">Sans préférence</option>')
+    : '<option value="">Sans préférence de couleur</option>';
+
+  document.getElementById('order-modal').classList.add('open');
+}
+function closeOrderModal() { document.getElementById('order-modal').classList.remove('open'); }
+function submitOrder() {
+  const name = document.getElementById('o-name').value.trim();
+  const phone = document.getElementById('o-phone').value.trim();
+  const zone = document.getElementById('o-zone').value.trim();
+
+  if (!name || !phone || !zone) {
+    showToast('⚠️ Remplissez tous les champs obligatoires');
+    return;
+  }
+
+  const p = data.products.find(x => x.id === orderProductId) || {name:'Produit'};
+  const color = document.getElementById('o-color').value || 'Sans préférence';
+
+  const message =
+`🛍️ *NOUVELLE COMMANDE*%0A%0A` +
+`📦 Produit : ${p.name}%0A` +
+`👤 Nom : ${name}%0A` +
+`📞 Téléphone : ${phone}%0A` +
+`📍 Adresse : ${zone}%0A` +
+`🎨 Couleur : ${color}`;
+
+  orders.unshift({
+    product:p.name,name,phone,zone,color,
+    date:new Date().toLocaleString('fr-FR')
+  });
+
+  saveOrders();
+  renderOrders();
+
+  document.getElementById('order-form-wrap').style.display = 'none';
+  document.getElementById('order-success').style.display = 'block';
+
+  window.open('https://wa.me/2250586878861?text=' + message, '_blank');
+}
+
+// ══════════════════════════════════════════════════════
+// ADMIN PANEL — PROTECTION MOT DE PASSE
+// ══════════════════════════════════════════════════════
+const ADMIN_HASH = '7e40c6940f29ef2ac1e2a114e9b7cc91b54336107404c9acf473f2962d30e496'; // hash Murielle2025
+
+async function hashPassword(pwd) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pwd));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+}
+
+let adminUnlocked = sessionStorage.getItem('mbs_admin') === '1';
+
+function toggleAdmin() {
+  const panel = document.getElementById('admin-panel');
+  if (panel.classList.contains('open')) {
+    panel.classList.remove('open');
+    return;
+  }
+  if (adminUnlocked) {
+    openAdminPanel();
+  } else {
+    document.getElementById('login-overlay').classList.add('open');
+    setTimeout(() => document.getElementById('login-pwd').focus(), 100);
+  }
+}
+
+async function checkLogin() {
+  const pwd = document.getElementById('login-pwd').value;
+  const input = document.getElementById('login-pwd');
+  const err = document.getElementById('login-error');
+  const hash = await hashPassword(pwd);
+  if (hash === ADMIN_HASH) {
+    adminUnlocked = true;
+    sessionStorage.setItem('mbs_admin', '1');
+    document.getElementById('login-overlay').classList.remove('open');
+    document.getElementById('login-pwd').value = '';
+    err.style.display = 'none';
+    openAdminPanel();
+  } else {
+    input.classList.add('error');
+    err.style.display = 'block';
+    input.value = '';
+    setTimeout(() => input.classList.remove('error'), 400);
+  }
+}
+
+function closeLogin() {
+  document.getElementById('login-overlay').classList.remove('open');
+  document.getElementById('login-pwd').value = '';
+  document.getElementById('login-error').style.display = 'none';
+}
+
+function openAdminPanel() {
+  document.getElementById('admin-panel').classList.add('open');
+  renderAdminProducts();
+  renderAdminStats();
+  initHeroTab();
+  initSettingsTab(); renderOrders();
+}
+
+function switchTab(id) {
+  document.querySelectorAll('.admin-tab-content').forEach(t => t.style.display = 'none');
+  document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).style.display = 'block';
+  event.target.classList.add('active');
+}
+
+// ── STATS ──
+function renderAdminStats() {
+  const total = data.products.length;
+  const inStock = data.products.filter(p => p.stock==='in').length;
+  document.getElementById('admin-stats').innerHTML = `
+    <div class="admin-stat"><div class="n">${total}</div><div class="l">Produits</div></div>
+    <div class="admin-stat"><div class="n">${inStock}</div><div class="l">En stock</div></div>`;
+}
+
+// ── PRODUCT LIST ──
+function renderAdminProducts() {
+  const list = document.getElementById('admin-product-list');
+  list.innerHTML = '';
+  if (!data.products.length) {
+    list.innerHTML = '<p style="color:#7a9090;font-size:0.85rem;text-align:center;padding:12px;">Aucun produit — ajoutez-en un !</p>';
+    return;
+  }
+  data.products.forEach(p => {
+    const thumb = p.img
+      ? `<img class="admin-product-thumb" src="${p.img}" alt="${p.name}">`
+      : `<div class="admin-product-thumb-ph">🧴</div>`;
+    list.innerHTML += `
+      <div class="admin-product-item">
+        ${thumb}
+        <div class="admin-product-info">
+          <div class="pname">${p.name}</div>
+          <div class="pprice">${fmt(p.price)} FCFA · ${p.stock==='in'?'<span style="color:#2e7d5a">En stock</span>':'<span style="color:#c0392b">Rupture</span>'}</div>
+        </div>
+        <div class="admin-product-actions">
+          <button class="abtn abtn-hero" title="Mettre en vitrine" onclick="setHeroProduct(${p.id})">🌟</button>
+          <button class="abtn abtn-edit" onclick="openProductForm(${p.id})">✏️</button>
+          <button class="abtn abtn-del" onclick="deleteProduct(${p.id})">🗑️</button>
+        </div>
+      </div>`;
+  });
+}
+
+// ── PRODUCT FORM ──
+function openProductForm(id = null) {
+  editingProductId = id;
+  selectedColors = [];
+  pendingProductImg = null;
+  document.querySelectorAll('#pf-colors .color-chip').forEach(c => c.classList.remove('sel'));
+  document.getElementById('pf-img-preview').style.display = 'none';
+  document.getElementById('pf-img-placeholder').style.display = 'block';
+
+  if (id) {
+    const p = data.products.find(x => x.id === id);
+    document.getElementById('pform-title').textContent = 'Modifier le produit';
+    document.getElementById('pf-name').value = p.name;
+    document.getElementById('pf-desc').value = p.desc;
+    document.getElementById('pf-price').value = p.price;
+    document.getElementById('pf-stock').value = p.stock;
+    selectedColors = [...(p.colors||[])];
+    document.querySelectorAll('#pf-colors .color-chip').forEach(c => {
+      if (selectedColors.includes(c.dataset.c)) c.classList.add('sel');
+    });
+    if (p.img) {
+      document.getElementById('pf-img-preview').src = p.img;
+      document.getElementById('pf-img-preview').style.display = 'block';
+      document.getElementById('pf-img-placeholder').style.display = 'none';
+    }
+  } else {
+    document.getElementById('pform-title').textContent = 'Nouveau produit';
+    document.getElementById('pf-name').value = '';
+    document.getElementById('pf-desc').value = '';
+    document.getElementById('pf-price').value = '';
+    document.getElementById('pf-stock').value = 'in';
+  }
+  document.getElementById('product-form').style.display = 'block';
+  document.getElementById('product-form').scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+function cancelProductForm() {
+  document.getElementById('product-form').style.display = 'none';
+  editingProductId = null;
+}
+
+function previewProductImage(input) {
+  const file = input.files[0]; if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    pendingProductImg = e.target.result;
+    document.getElementById('pf-img-preview').src = pendingProductImg;
+    document.getElementById('pf-img-preview').style.display = 'block';
+    document.getElementById('pf-img-placeholder').style.display = 'none';
+  };
+  reader.readAsDataURL(file);
+}
+
+function toggleChip(el) {
+  const c = el.dataset.c;
+  if (el.classList.contains('sel')) { el.classList.remove('sel'); selectedColors = selectedColors.filter(x=>x!==c); }
+  else { el.classList.add('sel'); selectedColors.push(c); }
+}
+
+function saveProduct() {
+  const name = document.getElementById('pf-name').value.trim();
+  const price = document.getElementById('pf-price').value;
+  if (!name || !price) { showToast('⚠️ Nom et prix obligatoires'); return; }
+
+  const productData = {
+    name, price: Number(price),
+    desc: document.getElementById('pf-desc').value.trim(),
+    stock: document.getElementById('pf-stock').value,
+    colors: [...selectedColors]
+  };
+  if (pendingProductImg) productData.img = pendingProductImg;
+
+  if (editingProductId) {
+    const idx = data.products.findIndex(p => p.id === editingProductId);
+    data.products[idx] = { ...data.products[idx], ...productData };
+    showToast('✅ Produit modifié !');
+  } else {
+    productData.id = Date.now();
+    productData.img = productData.img || null;
+    data.products.push(productData);
+    showToast('✅ Produit ajouté !');
+  }
+  save(); renderSite(); renderAdminProducts(); renderAdminStats();
+  cancelProductForm(); updateHeroProductSelect();
+}
+
+function deleteProduct(id) {
+  if (!confirm('Supprimer ce produit ?')) return;
+  data.products = data.products.filter(p => p.id !== id);
+  if (data.hero.linkedProduct === id) data.hero.linkedProduct = 0;
+  save(); renderSite(); renderAdminProducts(); renderAdminStats();
+  showToast('🗑️ Produit supprimé');
+}
+
+// ── HERO TAB ──
+function initHeroTab() {
+  const h = data.hero;
+  document.getElementById('hf-title').value = h.title.replace(/<[^>]+>/g,'');
+  document.getElementById('hf-desc').value = h.desc;
+  document.getElementById('hf-price').value = h.price;
+  document.getElementById('hf-delivery').value = h.delivery;
+  document.getElementById('hf-eyebrow').value = h.eyebrow;
+  updateHeroProductSelect();
+  renderHeroEditPreview();
+  if (h.img) {
+    document.getElementById('hf-img-preview').src = h.img;
+    document.getElementById('hf-img-preview').style.display = 'block';
+    document.getElementById('hf-img-placeholder').style.display = 'none';
+  }
+}
+
+function updateHeroProductSelect() {
+  const sel = document.getElementById('hf-product');
+  if (!sel) return;
+  sel.innerHTML = '<option value="0">— Aucun produit lié —</option>' +
+    data.products.map(p => `<option value="${p.id}" ${data.hero.linkedProduct===p.id?'selected':''}>${p.name}</option>`).join('');
+}
+
+function renderHeroEditPreview() {
+  const h = data.hero;
+  const linked = data.products.find(p => p.id === h.linkedProduct);
+  const img = h.img || (linked?.img) || null;
+  const thumbEl = img ? `<img src="${img}" alt="hero" style="width:64px;height:64px;border-radius:10px;object-fit:cover;flex:none;">` : `<div class="hep-ph">🧏</div>`;
+  document.getElementById('hero-edit-preview').innerHTML = `
+    ${thumbEl}
+    <div class="hep-info">
+      <div class="hname">${h.title.replace(/<[^>]+>/g,'').slice(0,40)}</div>
+      <div class="hprice">${fmt(h.price)} FCFA · livraison ${fmt(h.delivery)} FCFA</div>
+    </div>`;
+}
+
+function liveHero() {
+  // live update preview only
+  renderHeroEditPreview();
+}
+
+function previewHeroImage(input) {
+  const file = input.files[0]; if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    pendingHeroImg = e.target.result;
+    document.getElementById('hf-img-preview').src = pendingHeroImg;
+    document.getElementById('hf-img-preview').style.display = 'block';
+    document.getElementById('hf-img-placeholder').style.display = 'none';
+    renderHeroEditPreview();
+  };
+  reader.readAsDataURL(file);
+}
+
+function setHeroProduct(id) {
+  data.hero.linkedProduct = id;
+  const p = data.products.find(x => x.id === id);
+  if (p) {
+    data.hero.price = p.price;
+    data.hero.title = p.name;
+    data.hero.desc = p.desc;
+    if (p.img && !data.hero.img) data.hero.img = null;
+  }
+  save(); renderSite(); renderAdminProducts();
+  showToast('🌟 Vitrine mise à jour !');
+  switchTab('tab-hero'); initHeroTab();
+}
+
+function saveHero() {
+  data.hero.title = document.getElementById('hf-title').value.trim() || data.hero.title;
+  data.hero.desc = document.getElementById('hf-desc').value.trim() || data.hero.desc;
+  data.hero.price = Number(document.getElementById('hf-price').value) || data.hero.price;
+  data.hero.delivery = Number(document.getElementById('hf-delivery').value) || data.hero.delivery;
+  data.hero.eyebrow = document.getElementById('hf-eyebrow').value.trim() || data.hero.eyebrow;
+  data.hero.linkedProduct = Number(document.getElementById('hf-product').value) || 0;
+  if (pendingHeroImg) data.hero.img = pendingHeroImg;
+  save(); renderSite(); renderHeroEditPreview();
+  showToast('🌟 Vitrine mise à jour !');
+}
+
+// ── SETTINGS ──
+function initSettingsTab() {
+  document.getElementById('sf-name').value = data.settings.name;
+  document.getElementById('sf-city').value = data.settings.city;
+  document.getElementById('sf-phone').value = data.settings.phone;
+  document.getElementById('sf-delivery').value = data.settings.delivery;
+}
+function saveSettings() {
+  data.settings.name = document.getElementById('sf-name').value.trim();
+  data.settings.city = document.getElementById('sf-city').value.trim();
+  data.settings.phone = document.getElementById('sf-phone').value.trim();
+  data.settings.delivery = Number(document.getElementById('sf-delivery').value) || 1000;
+  data.hero.delivery = data.settings.delivery;
+  if (data.settings.phone) document.getElementById('footer-phone').textContent = '📱 ' + data.settings.phone;
+  save(); renderSite(); showToast('⚙️ Paramètres enregistrés !');
+}
+
+// ══════════════════════════════════════════════════════
+// HELPERS
+// ══════════════════════════════════════════════════════
+function fmt(n) { return Number(n).toLocaleString('fr-FR'); }
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+// ══════════════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════════════
+renderSite();
+</script>
+</body>
+</html>
