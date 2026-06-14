@@ -78,3 +78,9 @@
 
 </body>
 </html>
+<div style="background:white; margin:10px; padding:10px; border-radius:10px;">
+  <h3>💋 Rouge à lèvres</h3>
+  <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796" width="150">
+  <p>Prix : 2000 FCFA</p>
+  <a href="https://wa.me/2250586878861">Commander 📲</a>
+</div>
