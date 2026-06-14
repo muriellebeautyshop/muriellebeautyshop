@@ -36,3 +36,9 @@
 
 </body>
 </html>
+<div>
+  <h3>💋 Rouge à lèvres</h3>
+  <img src="https://via.placeholder.com/150" width="150">
+  <p>Prix : 2000 FCFA</p>
+  <a href="https://wa.me/2250586878861">Commander 📲</a>
+</div>
