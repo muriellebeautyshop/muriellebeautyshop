@@ -1,16 +1,22 @@
-## Hi there 👋
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Murielle Beauty Shop</title>
+</head>
+<body>
+  <h1>Bienvenue chez Murielle Beauty Shop 💄✨</h1>
+  <p>Produits de beauté de qualité à Abidjan</p>
 
-<!--
-**muriellebeautyshop/muriellebeautyshop** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+  <h2>Nos produits</h2>
 
-Here are some ideas to get you started:
+  <p>💋 Rouge à lèvres - 2000 FCFA</p>
+  <p>🧴 Crème visage - 5000 FCFA</p>
+  <p>✨ Parfum - 8000 FCFA</p>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+  <br>
+
+  <a href="https://wa.me/2250586878861">
+    Commander sur WhatsApp 📲
+  </a>
+</body>
+</html>
